@@ -1,9 +1,0 @@
-{
-  "name": "JoyReactor Download Button",
-  "version": "1.2.0",
-  "description": "Adds download buttton to images",
-  "icon": "http://joyreactor.cc/favicon.ico",
-  "match": ["http://joyreactor.cc/*", "http://joyreactor.com/*"],
-  "grant": ["GM_addStyle"],
-  "run-at": "document-end"
-}
