@@ -6,13 +6,21 @@ User scripts for Tampermonkey and other user script managers (not tested yet)
 
 # Image Viewer
 
-[![IV file size][iv-size]][iv-url] [![IV OpenUserJS][open-user-js-image]][iv-open-user-js-url] [![IV GreasyFork][greasy-fork-image]][iv-greasy-fork-url]
+[![IV file size][iv-size]][iv-url]
 
-[![CHANGELOG][changelog-image]](./image-viewer/CHANGELOG.md)
 
 View full-size images from image hosts (e.g. Fastpic) w/o leaving the page or on a new tab w/o ads. Some image hosts disallow hotlinking. Such image host links are opened in new tab
 
 :bulb: By default, script applies to all sites. I recommend enabling it only for specific sites. In Tampermonkey on script's settings tab uncheck `Original matches` and add your host's [masks](https://developer.chrome.com/docs/extensions/mv3/match_patterns/) in `User matches` (e.g. `https://myforum.net/*`)
+
+## Changes in this fork
+
+- Removed top & bot bars, only the image is left
+- Global page-wide gallery, now all images on the page can be navigated (prev\next)
+- Unlimited height for images
+- 100% width for images
+- Close image on double-click
+- Transition animations & blurring removed
 
 ## Controls
 
@@ -21,11 +29,10 @@ View full-size images from image hosts (e.g. Fastpic) w/o leaving the page or on
 - `←` - Previous image
 - `→` - Next image
 - `Esc` - Close image view
-- `Space` - Toggle image full height
 
 ### Mouse:
 
-- `double click` - Toggle image full height
+- `double click` - Close image
 - `click` on backdrop - Close image view
 
 ## Config
@@ -37,55 +44,6 @@ Available through the "Settings" script command at the Tampermonkey menu.
 - [Imagus](https://chrome.google.com/webstore/detail/imagus/immpkjjlgappgfkkfieppnmlhakdmaab)
 - [Handy Image](https://sleazyfork.org/en/scripts/109-handy-image)
 - [Imagehost Redirect](https://sleazyfork.org/en/scripts/2641-imagehost-redirect)
-<!--
-- [PornoLab.net Thumbnail Expander](https://sleazyfork.org/en/scripts/13546-pornolab-net-thumbnail-expander)
-- [pornolab.net Full Size Images](https://greasyfork.org/en/scripts/32681-pornolab-net-full-size-images)
-  -->
-
-# JoyReactor Download Button
-
-[![JRDB file size][jrdb-size]][jrdb-url] [![JRDB OpenUserJS][open-user-js-image]][jrdb-open-user-js-url] [![JRDB GreasyFork][greasy-fork-image]][jrdb-greasy-fork-url]
-
-[![CHANGELOG][changelog-image]](./joyreactor-download-button/CHANGELOG.md)
-
-- Shows image download link on hover
-- Makes gif image link downloadable
-
-"Downloadable" means you can download image by clicking (LMB) on the button. Link has [download](https://caniuse.com/#feat=download) attribute
-
-# Pornolab Enhancer
-
-[![PLE file size][ple-size]][ple-url] [![PLE OpenUserJS][open-user-js-image]][ple-open-user-js-url] [![PLE GreasyFork][greasy-fork-image]][ple-greasy-fork-url]
-
-[![CHANGELOG][changelog-image]](./pornolab-enhancer/CHANGELOG.md)
-
-Improves UX
-
-## Tags
-
-Turns everything inside `[ ]` into search link. Also removes tags from the title
-
-## Find similar
-
-Searches for similar posts
-
-## Pager
-
-Improves pager styles
-
-## Download
-
-Adds quick download button to the top of the page
-
-### Config menu
-
-Disable/enable certain features. Available through the site menu link "PLE"
-
-## Attributions
-
-- [Flag](https://www.flaticon.com/packs/countrys-flags) icons made by [Freepik](http://www.freepik.com) from [www.flaticon.com](https://www.flaticon.com/) is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
-- [Medical](https://www.flaticon.com/packs/medical-asserts) icons made by [Smashicons](https://www.flaticon.com/authors/smashicons) from [www.flaticon.com](https://www.flaticon.com/) is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
-- Picture icon made by made by [Good Ware](https://www.flaticon.com/authors/good-ware) from [www.flaticon.com](https://www.flaticon.com/) is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
 
 ## Tools and Resources
 
@@ -104,7 +62,7 @@ Disable/enable certain features. Available through the site menu link "PLE"
 [standard-image]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
 [standard-url]: https://standardjs.com
 [iv-size]: https://img.shields.io/github/size/nikolay-borzov/user-scripts/dist/image-viewer.user.js.svg
-[iv-url]: https://github.com/nikolay-borzov/user-scripts/raw/master/dist/image-viewer.user.js
+[iv-url]: https://github.com/owyn/image-viewer/raw/master/dist/image-viewer.user.js
 [iv-open-user-js-url]: https://openuserjs.org/scripts/nikolay-borzov/Image_Viewer
 [iv-greasy-fork-url]: https://greasyfork.org/scripts/443464-image-viewer/code/Image%20Viewer.user.js
 [jrdb-size]: https://img.shields.io/github/size/nikolay-borzov/user-scripts/dist/joyreactor-download-button.user.js.svg
