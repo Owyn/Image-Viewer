@@ -1039,18 +1039,38 @@
       },
 
       handler(event) {
-        if (event.defaultPrevented || event.repeat) {
+        if (event.defaultPrevented) { //  || event.repeat
           return
         }
 
         switch (event.key) {
           case 'ArrowRight': {
+			elements.imageContainer.scroll(0,0)
             image.next()
             break
           }
 
           case 'ArrowLeft': {
+			elements.imageContainer.scroll(0,0)
             image.previous()
+            break
+          }
+
+          case 'ArrowDown': {
+            elements.imageContainer.scrollBy({
+			top: 0.20 * window.innerHeight,
+			left: 0,
+			behavior: "smooth"
+			})
+            break
+          }
+         
+          case 'ArrowUp': {
+            elements.imageContainer.scrollBy({
+			top: -0.20 * window.innerHeight,
+			left: 0,
+			behavior: "smooth"
+			})
             break
           }
 
@@ -1074,7 +1094,6 @@
     },
 
     mouse(event) {
-		console.log(event.type)
       switch (event.type) {
         case 'mousedown': {
           state.dragging = true
